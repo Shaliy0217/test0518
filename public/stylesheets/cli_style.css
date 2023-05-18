@@ -1,0 +1,39 @@
+body{
+    background: #f7fff9;
+
+}
+.out {
+    border-collapse:collapse;
+    margin: 20px 20px;
+    background-color: white;
+    width: 65%;
+    table-layout: fixed;
+    margin: auto;
+}
+
+tr {
+    height: 40px;
+    font-weight: bold;
+    text-align:center;
+    border: none;
+}
+td {
+    border-bottom:2px #D2D2D2 solid;
+}
+
+.but {
+    background: #b7e4c7;
+    color: #2d6a4f;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    vertical-align: middle;
+    cursor:pointer;
+    margin-bottom: 40px;
+
+}
+
+.but:hover {
+    background: #2d6a4f;
+    color: #ffffff;
+}

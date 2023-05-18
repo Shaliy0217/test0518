@@ -1,0 +1,67 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #d8f3dc;
+}
+
+a {
+  color: #00B7FF;
+}
+.fle {
+  justify-content: center;
+  width: 400px;
+  height: 480px;
+  border-radius:10px;
+  margin: 0px auto 15px auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  background: white;
+}
+input {
+  margin-left: 20px;
+}
+
+.input-form input {
+  color: #929292;
+  opacity: 0.7;
+  border: none;
+  border-bottom: solid #52b788;
+  cursor: text;
+  display: block;
+  padding: 8px 0px;
+  width: 200px;
+  font-size: 16px;
+  line-height: 10px;
+  background-color: transparent
+}
+
+.input-form input:focus {
+  outline: none /*消除選取時的外框*/
+}
+
+label {
+  color: #2d6a4f;
+  font-weight: bold;
+}
+
+.input-form{
+  font-size: 16px;
+  line-height: 2.0;
+  margin-left: 20px;
+}
+
+.but {
+  background: #b7e4c7;
+  color: #2d6a4f;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  vertical-align: middle;
+  cursor:pointer;
+}
+
+.but:hover {
+  background: #2d6a4f;
+  color: #ffffff;
+}

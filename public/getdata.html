@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="stylesheets/cli_style.css"/>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>高麗菜價格查詢</title>
+</head>
+<body>
+  <h1 style="text-align: center ;color: #1b4332">高麗菜價格查詢</h1>
+  <div id="app">
+    <div style="text-align: center">
+      <button class="but" v-on:click="handleClick">顯示所有資料</button>
+    </div>
+
+    <table class="out">
+      <thead>
+      <tr style="background-color: #b7e4c7; color: #2d6a4f">
+        <th>年(西元)</th>
+        <th>月</th>
+        <th>日</th>
+        <th>成交價</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr v-for="item in data">
+        <td>{{ item.year }}</td>
+        <td>{{ item.month }}</td>
+        <td>{{ item.day }}</td>
+        <td>{{ item.pri }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          data: []
+        };
+      },
+      methods: {
+        async handleClick() {
+          console.log("data");
+
+          const url = "http://localhost:3000/api"; // 資料傳送到的 URL
+          try {
+            const response = await fetch(url, {
+              method: 'GET',
+            });
+            const res_data = await response.json();
+            this.data = res_data ;
+            console.log("成功", res_data );
+          } catch (error) {
+            console.log("錯誤", error);
+          }
+        }
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>
